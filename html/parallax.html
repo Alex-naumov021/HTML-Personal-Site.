@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .logo-link {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+      }
+      .logo {
+        margin: 0;
+      }
+      .header {
+        background-color: teal;
+        min-height: 540px;
+        background-repeat: no-repeat;
+        background-image: url(./images/mobile-bg.png);
+        background-position: center;
+        background-size: cover;
+        display: block;
+      }
+
+      .log-nav-item {
+        font-size: 14px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
+      .nav {
+        display: flex;
+      }
+      .log-nav {
+        display: flex;
+      }
+      .log-nav-item {
+        display: block;
+        padding: 8px 16px;
+        border: 3px solid transparent;
+        border-radius: 20px;
+      }
+
+      .log-nav-item:hover,
+      .log-nav-item:focus {
+        border: 3px solid #fff;
+      }
+      .header-title {
+        font-size: 28px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .header-text {
+        font-size: 18px;
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        margin: 0;
+        text-align: center;
+      }
+
+      .link:hover {
+        background-color: #fff;
+        color: #ff4e50;
+      }
+      .link:hover,
+      .link:focus {
+        color: #fff;
+        background-color: #ff4e50;
+      }
+      .content-top__inner {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+      .content-title {
+        font-size: 22px;
+        color: #333333;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+      }
+
+      .content-item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-basis: 236px;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 50px;
+        align-items: flex-start;
+        transform: scale(1);
+      }
+      .content-item-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1);
+      }
+      .content-item:hover .content-btn,
+      .content-item:focus .content-btn {
+        transform: scale(1.05);
+      }
+
+      .content-item-title {
+        font-size: 14px;
+        color: #333333;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
+      .content-item-text {
+        font-size: 14px;
+        color: #7a7a7a;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+      }
+      .content-item-title,
+      .content-item-text {
+        display: block;
+        text-align: center;
+        margin-top: 14px;
+      }
+      .link {
+        all: unset;
+        display: block;
+        min-width: 280px;
+        border-radius: 20px;
+        background-color: #ffffff;
+        border: 2px solid #ff4e50;
+        font-family: "Montserrat", sans-serif;
+        color: #ff4e50;
+        text-align: center;
+        font-weight: 700;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .user-photo {
+        display: block;
+        position: relative;
+      }
+      .content-btn {
+        all: unset;
+        width: 30px;
+        height: 30px;
+        background-color: #ff4e50;
+        border-radius: 100%;
+        border: 4px solid #fff;
+        position: absolute;
+      }
+      .fix {
+        position: absolute;
+        right: 108px;
+      }
+      .content-btn-icon {
+        transform: translateX(5px) translateY(5px);
+      }
+
+      .content-item:nth-child(2n) .content-btn {
+        background-color: #ffa507;
+      }
+      .content-item:nth-child(3n) .content-btn {
+        background-color: #1cd7ad;
+      }
+      .content-item:nth-child(4n) .content-btn {
+        background-color: #4e73db;
+      }
+      .footer {
+        background-color: #222222;
+        padding: 50px 0;
+        color: #fff;
+        text-align: center;
+      }
+
+      /*Desktop*/
+
+      @media screen and (min-width: 940px) {
+        .container {
+          width: 920px;
+          margin-right: auto;
+          margin-left: auto;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        .parallax {
+          background-image: url(./images/mobile-bg.png);
+          height: 100%;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .header {
+          background-image: url(./images/header-bg.png);
+          padding-top: 40px;
+          max-width: 1440px;
+          background-position: center;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        .nav {
+          justify-content: space-between;
+          margin-bottom: 140px;
+        }
+        .header-title {
+          font-size: 52px;
+          font-weight: 700;
+          text-align: center;
+          margin-bottom: 36px;
+        }
+        .header-text {
+          font-size: 24px;
+          margin-bottom: 30px;
+        }
+
+        .link {
+          display: block;
+          width: 284px;
+          padding: 12px 24px;
+        }
+        .content {
+          padding-top: 64px;
+          padding-bottom: 70px;
+        }
+        .content-top__inner {
+          width: 700px;
+        }
+        .content-title {
+          margin-bottom: 30px;
+        }
+        .content-list {
+          display: flex;
+          margin-bottom: 36px;
+        }
+        .content-btn {
+          right: 28px;
+          top: 84px;
+        }
+      }
+
+      /*phone*/
+
+      @media screen and (min-width: 320px) and (max-width: 531px) {
+        .container {
+          width: 300px;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        .nav {
+          padding-top: 20px;
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+        .log-nav {
+          margin-bottom: 114px;
+        }
+
+        .header-title {
+          margin: 40px;
+          margin-bottom: 16px;
+        }
+        .header-text {
+          margin-bottom: 16px;
+        }
+        .link {
+          display: block;
+          width: 280px;
+          padding: 12px;
+        }
+        .content-top__inner {
+          width: 300px;
+        }
+        .content-title {
+          padding-top: 72px;
+          margin-bottom: 20px;
+        }
+        .content-item {
+          margin-bottom: 30px;
+        }
+        .content-item .content-btn,
+        .content-item:focus .content-btn {
+          transform: scale(1.05);
+        }
+        .content-btn {
+          right: 58px;
+          top: 100px;
+        }
+        .content {
+          padding-bottom: 56px;
+        }
+      }
+
+      /* tablet */
+      @media screen and (min-width: 532px) and (max-width: 939px) {
+        .container {
+          min-width: 512px;
+          margin: 0 auto;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        .header {
+          min-height: 700px;
+          background-repeat: no-repeat;
+          background-image: url(./images/tablet-bg.png);
+        }
+        .nav {
+          padding-top: 40px;
+          padding-left: 54px;
+          padding-right: 54px;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 146px;
+        }
+        .header-title {
+          font-size: 52px;
+          width: 540px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 36px;
+        }
+        .header-text {
+          margin-bottom: 34px;
+        }
+        .link {
+          display: block;
+          width: 284px;
+          padding: 12px 24px;
+        }
+        .content {
+          padding-right: 20px;
+          padding-left: 20px;
+          padding-bottom: 40px;
+        }
+        .content-top__inner {
+          min-width: 512px;
+        }
+        .content-title {
+          padding-top: 72px;
+          margin-bottom: 34px;
+        }
+        .content-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-bottom: 32px;
+          width: 512px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+        .content-btn {
+          right: 28px;
+          top: 84px;
+        }
+        .content-item:hover .content-btn,
+        .content-item:focus .content-btn {
+          transform: scale(1.05);
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parallax">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <h1 class="logo">
+              <a href="#" class="logo-link">URLAUBSGLÜCK</a>
+            </h1>
+            <ul class="log-nav">
+              <li><a href="#" class="log-nav-item">Log in</a></li>
+              <li><a href="#" class="log-nav-item">Sign up</a></li>
+            </ul>
+          </nav>
+          <h2 class="header-title">Share your holiday dreams</h2>
+          <p class="header-text">And find the perfect partner to fullfill it</p>
+          <a href="#" class="link">Find your holiday partner</a>
+        </div>
+      </header>
+      <main>
+        <section class="content">
+          <div class="container">
+            <div class="content-top__inner">
+              <h3 class="content-title">Lorem ipsum dolor sit amet</h3>
+              <p class="content-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
+
+            <ul class="content-list">
+              <li class="content-item">
+                <div class="content-item-inner">
+                  <img
+                    class="user-photo"
+                    src="./images/user1.png"
+                    alt="img"
+                    width="122"
+                    height="122"
+                  />
+                  <button type="button" class="content-btn">
+                    <svg class="content-btn-icon">
+                      <use href="./images/icons/tv.svg#tv"></use>
+                    </svg>
+                  </button>
+
+                  <h3 class="content-item-title">Bradley Hunter</h3>
+                  <p class="content-item-text">
+                    Based in Chicago. I love playing tennis and loud music.
+                  </p>
+                </div>
+              </li>
+              <li class="content-item">
+                <div class="content-item-inner">
+                  <img
+                    class="user-photo"
+                    src="./images/user2.png"
+                    alt="img"
+                    width="122"
+                    height="122"
+                  />
+                  <button type="button" class="content-btn">
+                    <svg class="content-btn-icon">
+                      <use href="./images/icons/tube.svg#tube"></use>
+                    </svg>
+                  </button>
+
+                  <h3 class="content-item-title">Bradley Hunter</h3>
+                  <p class="content-item-text">
+                    Based in Chicago. I love playing tennis and loud music.
+                  </p>
+                </div>
+              </li>
+              <li class="content-item">
+                <div class="content-item-inner">
+                  <img
+                    class="user-photo"
+                    src="./images/user3.png"
+                    alt="img"
+                    width="122"
+                    height="122"
+                  />
+                  <button type="button" class="content-btn">
+                    <svg class="content-btn-icon">
+                      <use href="./images/icons/cup.svg#cup"></use>
+                    </svg>
+                  </button>
+
+                  <h3 class="content-item-title">Bradley Hunter</h3>
+                  <p class="content-item-text">
+                    Based in Chicago. I love playing tennis and loud music.
+                  </p>
+                </div>
+              </li>
+              <li class="content-item">
+                <div class="content-item-inner">
+                  <img
+                    class="user-photo"
+                    src="./images/user4.png"
+                    alt="img"
+                    width="122"
+                    height="122"
+                  />
+                  <button type="button" class="content-btn">
+                    <svg class="content-btn-icon">
+                      <use href="./images/icons/telegramm.svg#telegramm"></use>
+                    </svg>
+                  </button>
+
+                  <h3 class="content-item-title">Bradley Hunter</h3>
+                  <p class="content-item-text">
+                    Based in Chicago. I love playing tennis and loud music.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <a class="link">See other partners</a>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">© Lorem ipsum dolor sit amet</div>
+      </footer>
+    </div>
+  </body>
+</html>
