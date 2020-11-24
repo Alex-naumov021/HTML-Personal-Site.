@@ -1,26 +1,53 @@
 body {
-  background-color: rgb(146, 112, 112);
   font-family: "Goldman", cursive;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
-a {
-  color: white;
-}
+
 h1,
 h3 {
+  text-align: center;
   font-weight: 700;
+}
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+.header {
+  align-items: center;
+  padding-top: 75px;
 }
 .photo {
   width: 240px;
   height: 320px;
+  display: flex;
+  margin: 0 auto;
+}
+.content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.content-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.content-item {
+  width: 240px;
+}
+
+.footer {
+  background-color: rgb(43, 41, 41);
+  text-align: center;
+  padding: 25px;
+}
+.footer h3 {
+  color: azure;
 }
 .contact-link {
   color: yellowgreen;
 }
-
-.toch {
-  border-bottom: 10px dotted red;
-  border-top: none;
-
-  width: 50px;
+.my-work {
+  text-align: center;
+  margin: 0 auto;
 }
